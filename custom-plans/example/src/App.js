@@ -3,11 +3,14 @@ import React from 'react'
 import { Plans, TestComponent, blueTheme, greenTheme } from 'custom-plans'
 
 import 'custom-plans/dist/index.css'
+// import { BtnTabs } from '../../src'
 
 const dataPlans = [
   {
     name: 'Basic',
     price: '19.50',
+    oldPrice: '39',
+    discount: '50% off',
     pillText: 'Month Billed Quarterly',
     description: 'Standard plan for One Region',
     btnText: 'Buy Basic',
@@ -21,6 +24,8 @@ const dataPlans = [
   {
     name: 'Premium',
     price: '29.50',
+    oldPrice: '59',
+    discount: '50% off',
     pillText: 'Month Billed Quarterly',
     description: 'Standard plan for All Regions',
     btnText: 'Buy Premium',

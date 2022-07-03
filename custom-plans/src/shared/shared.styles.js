@@ -9,9 +9,17 @@ export const SharedStyles = makeStyles((theme) => ({
     letterSpacing: 0,
     textAlign: 'left'
   },
+  inline: {
+    display: 'inline-flex'
+  },
   priceBox: {
     display: 'flex',
     alignItems: 'baseline'
+  },
+  discountBox: {
+    display: 'flex',
+    padding: theme.spacing(2.5, 0.5, 0, 0.5)
+    // alignItems: 'baseline'
   },
   currency: {
     // font-family: Inter;
@@ -27,6 +35,22 @@ export const SharedStyles = makeStyles((theme) => ({
     fontWeight: 700,
     lineHeight: '48px',
     letterSpacing: 0
+  },
+  oldPrice: {
+    // fontFamily: Inter;
+    padding: theme.spacing(0, 0.5),
+    fontSize: 14,
+    fontWeight: 600,
+    lineHeight: '17px',
+    letterSpacing: 0,
+    textDecoration: 'line-through'
+  },
+  discount: {
+    padding: theme.spacing(0, 0.25),
+    fontSize: 12,
+    fontWeight: 600,
+    lineHeight: '15px',
+    letterSpacing: '-0.05em'
   },
   pill: {
     // font-family: Inter;

@@ -23,7 +23,11 @@ export default function Plan({ plan }) {
         )}
         <Box className={classes.header}>
           <TitleTag title={plan.name} />
-          <PriceTag price={plan.price} />
+          <PriceTag
+            price={plan.price}
+            oldPrice={plan.oldPrice}
+            discount={plan.discount}
+          />
           {plan.pillText && <Pill text={plan.pillText} />}
           <Description text={plan.description} />
         </Box>

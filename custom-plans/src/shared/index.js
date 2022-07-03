@@ -13,14 +13,26 @@ export const TitleTag = ({ title }) => {
   )
 }
 
-export const PriceTag = ({ price }) => {
+export const PriceTag = ({ price, oldPrice, discount }) => {
   const classes = SharedStyles()
   return (
-    <Box className={classes.priceBox}>
-      {price !== 'Custom' && (
-        <Typography className={classes.currency}>&#x24;</Typography>
-      )}
-      <Typography className={classes.price}>{price}</Typography>
+    <Box className={classes.inline}>
+      <Box className={classes.priceBox}>
+        {price !== 'Custom' && (
+          <Typography className={classes.currency}>&#x24;</Typography>
+        )}
+        <Typography className={classes.price}>{price}</Typography>
+      </Box>
+      <Box className={classes.discountBox}>
+        {oldPrice && (
+          <Typography className={classes.oldPrice}>&#x24;{oldPrice}</Typography>
+        )}
+        {discount && (
+          <Typography className={classes.discount} color='primary'>
+            {discount}
+          </Typography>
+        )}
+      </Box>
     </Box>
   )
 }
